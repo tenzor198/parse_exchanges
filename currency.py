@@ -1,5 +1,5 @@
 import telebot
-from telebot import types
+# from telebot import types
 import regex
 import json
 import requests
@@ -97,21 +97,5 @@ def start(message):
     {exchanges}
     """
     bot.send_message(message.chat.id, output_message, parse_mode='html')
-    # if len(output_message) > 4096:
-    #     for x in range(0, len(output_message), 4096):
-    #         bot.send_message(message.chat.id, output_message[x:x + 4096], parse_mode='html')
-    # else:
-    #     bot.send_message(message.chat.id, output_message, parse_mode='html')
-    # bot.send_message(message.chat.id, 'Hello press button', parse_mode='html')
-
-
-# @bot.message_handler(commands=['help'])
-# def website(message):
-#     markup = types.ReplyKeyboardMarkup()
-#     website = types.KeyboardButton('Курс рубля в тенге')
-#
-#     markup.add(website)
-#     bot.send_message(message.chat.id, corona_curs(), reply_markup=markup)
-#
 
 bot.polling(none_stop=True)
