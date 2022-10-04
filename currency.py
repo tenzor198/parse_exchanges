@@ -5,7 +5,9 @@ import json
 import requests
 from bs4 import BeautifulSoup
 from fake_useragent import UserAgent
-bot = telebot.TeleBot('5486292384:AAGVB3T_uvfF75KcrMJ2k-Yww4Pr2GW_XCA')
+import os
+
+bot = os.getenv('BOT_TOKEN')
 
 
 def corona_curs():
