@@ -1,3 +1,4 @@
 fake_useragent
 telebot
 bs4
+gunicorn
